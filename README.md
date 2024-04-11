@@ -21,7 +21,7 @@ cd backend
 - Edit and Rename .env copy file to .env 
 ```bash
 
-url=client_url
+Url=client_url
 # allow socket connection to Client Base Url
 
 ```
