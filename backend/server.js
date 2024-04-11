@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express=require('express')
 const http = require('http');
 const { Server } = require('socket.io');
@@ -9,6 +10,7 @@ const docs = ywsUtils.docs;
 const Y = require('yjs');
 const cors=require('cors')
 const path=require('path')
+const url=process.env.Url
 
 const app=express()
 
@@ -21,7 +23,7 @@ app.use(cors())
 
 const io = new Server(server,{
     cors:{
-        origin:'http://localhost:3000',
+        origin:url,
         methods:['GET','POST']
     }
 });
